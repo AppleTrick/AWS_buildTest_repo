@@ -9,6 +9,7 @@ export default function BoardPages() {
     <>
       <div>게시글아이디 : {router.query.boardId}</div>
       <div> 게시판 상세 동적 페이지 입니다.</div>
+      <div>getServerSideProps주석화시킴</div>
     </>
   );
 }
