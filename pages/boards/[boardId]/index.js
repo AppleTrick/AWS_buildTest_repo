@@ -1,16 +1,13 @@
 "use client";
 
 import { useParams } from "next/navigation";
-
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useSearchParams } from "next/navigation";
 
 export default function BoardPages() {
-  // const router = useRouter();
-  // console.log(router);
-
+  const router = useRouter();
+  console.log(router ? router.query : "");
   // console.log("라우터 정상 작동 확인 : " + router.query.boardId);
-
   const params = useParams();
   const searchParams = useSearchParams();
 
