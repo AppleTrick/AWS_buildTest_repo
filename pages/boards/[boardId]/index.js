@@ -1,13 +1,25 @@
-import { useRouter } from "next/router";
+"use client";
+
+import { useParams } from "next/navigation";
+
+// import { useRouter } from "next/router";
+import { useSearchParams } from "next/navigation";
 
 export default function BoardPages() {
-  const router = useRouter();
-  console.log(router);
-  console.log("라우터 정상 작동 확인 : " + router.query.boardId);
+  // const router = useRouter();
+  // console.log(router);
 
+  // console.log("라우터 정상 작동 확인 : " + router.query.boardId);
+
+  const params = useParams();
+  const searchParams = useSearchParams();
+
+  console.log(params ? params.boardId : "No boardId found");
+
+  // console.log(searchParams);
   return (
     <>
-      <div>게시글아이디 : {router.query.boardId}</div>
+      <div>게시글아이디 : {params ? params.boardId : ""}</div>
       <div> 게시판 상세 동적 페이지 입니다.</div>
       <div>getServerSideProps주석화시킴</div>
     </>
