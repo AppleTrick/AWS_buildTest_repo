@@ -7,7 +7,7 @@
 # RUN sudo npm install -g yarn
 
 #2. 이미 리눅스, node, yarn, npm 모두 깔려있는 컴퓨터
-FROM node:14
+FROM node:18
 
 # 2-2. 프로그램 세팅하는 과정
 # RUN mkdir myfolder => 카피할때 자동으로 만들기때문에 굳이 필요 없음

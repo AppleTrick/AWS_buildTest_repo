@@ -7,5 +7,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    ports:
+      # - 3000:3000 3000 에서 3000
+      - 2500:4000
+      # 2500 에서 4000
 
   # 두번째 컴퓨터 이름
